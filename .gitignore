@@ -1,0 +1,7 @@
+# 忽略文件
+!.gitignore
+log/nginx/*.log
+data/mysql/
+data/redis/
+www/.composer/
+www/ssh/
