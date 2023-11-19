@@ -50,3 +50,15 @@ services:
       - ./log/mysql:/var/log/mysql/
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
+
+  # ------------------
+  fund-stock-timer:
+    image: iszmxw/fund-stock-timer:latest
+    container_name: xw-timer
+    restart: always
+    environment:
+    CONFIG_FILE: ./config
+    volumes:
+      - /home/yezhiming/binary/fund-stock/timer:/home/yezhiming/binary/fund-stock/timer/config
+      - /home/yezhiming/binary/logs:/home/yezhiming/binary/fund-stock/fund-stock/timer/logs
+  # ------------------
