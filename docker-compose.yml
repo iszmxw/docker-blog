@@ -57,8 +57,8 @@ services:
     container_name: xw-timer
     restart: always
     environment:
-    CONFIG_FILE: ./config
+      CONFIG_FILE: ./config
     volumes:
-      - /home/yezhiming/binary/fund-stock/timer:/home/yezhiming/binary/fund-stock/timer/config
-      - /home/yezhiming/binary/logs:/home/yezhiming/binary/fund-stock/fund-stock/timer/logs
+      - /home/yezhiming/binary/fund-stock/timer:/home/yezhiming/binary/timer/config
+      - /home/yezhiming/binary/logs:/home/yezhiming/binary/timer/logs
   # ------------------
