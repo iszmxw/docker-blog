@@ -62,3 +62,15 @@ services:
       - /home/yezhiming/binary/fund-stock/timer:/home/yezhiming/binary/timer/config
       - /home/yezhiming/binary/logs:/home/yezhiming/binary/timer/logs
   # ------------------
+
+  # ------------------
+  gotify:
+    image: gotify/server
+    container_name: xw-gotify
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - GOTIFY_DEFAULTUSER_PASS=123456
+    volumes:
+      - /home/yezhiming/binary/gotify/data:/app/data
+  # ------------------
