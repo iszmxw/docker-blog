@@ -1,3 +1,4 @@
+
 version: "3"
 services:
   # ------------------
@@ -8,6 +9,7 @@ services:
     ports:
       - "80:8012"
       - "443:443"
+      - "1026:1026"
     volumes:
       - ./www/:/var/www/
       - ./conf/nginx/conf.d/:/etc/nginx/conf.d/
@@ -50,3 +52,27 @@ services:
       - ./log/mysql:/var/log/mysql/
     environment:
       MYSQL_ROOT_PASSWORD: "123456"
+
+  # ------------------
+  fund-stock-timer:
+    image: iszmxw/fund-stock-timer:latest
+    container_name: xw-timer
+    restart: always
+    environment:
+      CONFIG_FILE: ./config
+    volumes:
+      - /home/yezhiming/binary/fund-stock/timer:/home/yezhiming/binary/timer/config
+      - /home/yezhiming/binary/logs:/home/yezhiming/binary/timer/logs
+  # ------------------
+
+  # ------------------
+  gotify:
+    image: gotify/server
+    container_name: xw-gotify
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+      - GOTIFY_DEFAULTUSER_PASS=123456
+    volumes:
+      - /home/yezhiming/binary/gotify/data:/app/data
+  # ------------------

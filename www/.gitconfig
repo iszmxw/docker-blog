@@ -1,0 +1,8 @@
+[i18n]
+	commitencoding = utf-8
+	logoutputencoding = utf-8
+[user]
+	email = mail@54zm.com
+	name = iszmxw
+[credential]
+	helper = store
