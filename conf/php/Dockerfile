@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.4.33-fpm
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV TZ=Asia/Shanghai
@@ -12,9 +12,13 @@ RUN apt-get clean
 RUN apt-get update
 RUN apt-get install --assume-yes apt-utils
 RUN apt-get install -y libssl-dev
+RUN apt-get install -y zlib1g-dev
+RUN apt-get install -y libpng-dev
 
 # 安装扩展
 RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install gd
 
 
 # install git and composer
