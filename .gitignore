@@ -5,3 +5,4 @@ data/mysql/
 data/redis/
 www/.composer/
 www/ssh/
+www/site/
