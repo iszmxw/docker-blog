@@ -4,5 +4,6 @@ log/nginx/*.log
 data/mysql/
 data/redis/
 www/.composer/
+www/.ssh/
 www/ssh/
 www/site/
