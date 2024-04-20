@@ -65,3 +65,43 @@ ls -la
 du -sh *
 ls -la
 exit
+ls -la
+exit
+git status
+cd ..
+git status
+ls -la
+cd ethanyep.cn/
+ls -la
+git status
+git push
+git config --global credential.helper store
+git pull
+git pull
+git pull
+git pull
+git pull
+git pull
+git status
+ls -la
+git pull
+git add .
+git commit -m '1'
+git push
+git push
+git pull
+ls -la
+ls -la .git
+exit
+ls -la
+git pull
+vim ~/.gitconfig
+cat ~/.gitconfig 
+git config --global url."https://github.com.cnpmjs.org/".insteadOf "https://github.com/"
+cat ~/.gitconfig 
+git pull
+git config --global url."https://gitclone.com/".insteadOf "https://github.com/"
+cat ~/.gitconfig 
+git pull
+vi ~/.gitconfig 
+exit
