@@ -105,3 +105,11 @@ cat ~/.gitconfig
 git pull
 vi ~/.gitconfig 
 exit
+ls -la
+git pull
+git pull
+git pull
+ls -la
+git status
+git pull
+exit
