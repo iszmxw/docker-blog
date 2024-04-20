@@ -41,7 +41,7 @@ services:
   # ------------------
   mysql_master:
     user: "mysql"
-    container_name: mysql-master
+    container_name: xw_mysql
     image: mysql:5.7
     command: "--innodb_use_native_aio=0"
     ports:
@@ -51,12 +51,12 @@ services:
       - ./conf/mysql/my.cnf:/etc/mysql/conf.d/mysql.cnf:ro
       - ./log/mysql:/var/log/mysql/
     environment:
-      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_ROOT_PASSWORD: "mail@54zm.com"
 
   # ------------------
   fund-stock-timer:
     image: iszmxw/fund-stock-timer:latest
-    container_name: xw-timer
+    container_name: xw_timer
     restart: always
     environment:
       CONFIG_FILE: ./config
@@ -68,7 +68,7 @@ services:
   # ------------------
   gotify:
     image: gotify/server
-    container_name: xw-gotify
+    container_name: xw_gotify
     restart: always
     environment:
       - TZ=Asia/Shanghai
